@@ -1,9 +1,9 @@
 //ES6 tikai šis pieejams
 class Karatavas {
   constructor(id) {
-    this.konteineris = document.getElementById(id);
-    if (this.konteineris) {
-      this.konteineris.innerHTML = "Te būs spēle";
+    this.konteiners = document.getElementById(id);
+    if (this.konteiners) {
+      this.konteiners.innerHTML = "Te būs spēle";
     }
     this.statuss = Karatavas.STATUSS_NEINICIALIZETS;
   }
@@ -16,10 +16,10 @@ class Karatavas {
 */
   novakt() { // Statiska funkcija, kas dzīvo zem objekta instances
     
-    if (this.konteineris) {
-      this.konteineris.innerHTML = "";
+    if (this.konteiners) {
+      this.konteiners.innerHTML = "";
     }
-    delete this.konteineris;
+    delete this.konteiners;
     this.statuss = Karatavas.STATUSS_NOVAKTA;
   }
 }
